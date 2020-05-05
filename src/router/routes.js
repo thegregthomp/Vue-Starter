@@ -4,11 +4,20 @@ import Components from '../components'
 
 export const routes = [
     {
-      path: '/foo',
-      component: Components.BaseComponent
-    }, {
       path: '/',
-      redirect: 'foo'
+      redirect: 'dashboard'
+    }, {
+      path: '/login',
+      component: Components.LoginComponent,
+      meta: {
+        guest: true
+      }
+    }, {
+      path: '/dashboard',
+      component: Components.DashboardComponent,
+      meta: {
+        requiresAuth: true
+      }
     }, {
       path: "*",
       component: Components.PageNotFound

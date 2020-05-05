@@ -1,0 +1,60 @@
+.form-container{
+  @apply text-blue-400;
+  .form-row{
+    label, input{
+      @apply w-full;
+      @apply block;
+      @apply text-lg;
+    }
+    label{
+      @apply text-blue-300;
+      @apply mb-1;
+    }
+    input{
+      @apply border-grey-400;
+      @apply border-solid;
+      @apply border-b;
+      height:36px;
+    }
+    .password-wrapper{
+      @apply relative;
+      svg{
+        @apply absolute;
+        right:12px;
+        bottom: 12px;
+      }
+    }
+  }
+  .button-input{
+    @apply w-full;
+    @apply h-16;
+    @apply bg-blue-100;
+    @apply text-white;
+    @apply text-center;
+    @apply uppercase;
+    transition: all 100ms linear;
+    &:hover{
+      @apply bg-blue-110;
+    }
+    // @apply leading-12;
+  }
+  .form-links{
+    &__link{
+      @apply mb-2;
+      a{
+        @apply text-blue-100;
+        font-family: "BrandonText-Bold";
+        &:hover{
+          @apply text-blue-110;
+        }
+      }
+    }
+  }
+}
+
+textarea:focus, input:focus{
+    outline: none;
+}
+*:focus {
+    outline: none;
+}

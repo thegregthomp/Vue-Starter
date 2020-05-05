@@ -19,10 +19,17 @@ new Vue({
     components: Components,
     methods: {},
     mounted() {
-        // Resolve the promise
-        console.log('VUE!')
-        // Output any flash messages
     },
     render: h => h(Layout),
     computed: {}
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+  document.querySelectorAll('.menu-toggle').forEach(e => {
+    e.addEventListener('click', ()=>{
+      console.log('clicked')
+      const element = document.querySelector('.left-nav');
+      element.classList.toggle('active');
+    })
+  });
 });

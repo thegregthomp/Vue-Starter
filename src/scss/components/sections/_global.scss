@@ -1,0 +1,17 @@
+.section-header{
+  @apply text-blue-300;
+  @apply bg-grey-500;
+  @apply py-3;
+  font-family: "BrandonGrotesqueRegular";
+  h2{
+    @apply text-4xl;
+    font-weight: normal;
+    @screen sm{
+      @apply text-3xl;
+
+    }
+  }
+}
+.section-container{
+  @apply py-12;
+}

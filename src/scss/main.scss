@@ -2,9 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
-$body-color: blue;
+@import './_global.scss';
 
-body {
-  color: $body-color;
-  @apply text-xl;
-}
+@import './components/_header';
+@import './components/_footer';
+@import './components/_forms';
+@import './components/sections/_global';

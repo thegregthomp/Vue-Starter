@@ -1,0 +1,123 @@
+@font-face {
+  font-family: "BrandonGrotesqueLight";
+  src: url("/fonts/brandon_light_it-webfont.ttf") format("truetype"),
+}
+@font-face {
+  font-family: "BrandonGrotesqueLight";
+  src: url("/fonts/brandon_light-webfont.ttf") format("truetype"),
+}
+@font-face {
+  font-family: "BrandonGrotesqueMedium";
+  src: url("/fonts/brandon_med_it-webfont.ttf") format("truetype"),
+}
+@font-face {
+  font-family: "BrandonGrotesqueMedium";
+  src: url("/fonts/brandon_med-webfont.ttf") format("truetype"),
+}
+@font-face {
+  font-family: "BrandonGrotesqueRegular";
+  src: url("/fonts/brandon_reg_it-webfont.ttf") format("truetype"),
+}
+@font-face {
+  font-family: "BrandonGrotesqueRegular";
+  src: url("/fonts/brandon_reg-webfont.ttf") format("truetype"),
+}
+@font-face {
+  font-family: "BrandonGrotesqueThin";
+  src: url("/fonts/brandon_thin_it-webfont.ttf") format("truetype"),
+}
+@font-face {
+  font-family: "BrandonGrotesqueThin";
+  src: url("/fonts/brandon_thin-webfont.ttf") format("truetype"),
+}
+@font-face {
+  font-family: "BrandonText-Light";
+  src: url("/fonts/BrandonText-Light.otf") format("opentype");
+}
+@font-face {
+  font-family: "BrandonText-LightItalic";
+  src: url("/fonts/BrandonText-LightItalic.otf") format("opentype");
+}
+@font-face {
+  font-family: "BrandonText-Regular";
+  src: url("/fonts/BrandonText-Regular.otf") format("opentype");
+}
+@font-face {
+  font-family: "BrandonText-RegularItalic";
+  src: url("/fonts/BrandonText-RegularItalic.otf") format("opentype");
+}
+@font-face {
+  font-family: "BrandonText-Bold";
+  src: url("/fonts/BrandonText-Bold.otf") format("opentype");
+}
+@font-face {
+  font-family: "BrandonText-BoldItalic";
+  src: url("/fonts/BrandonText-BoldItalic.otf") format("opentype");
+}
+body{
+  font-family: "BrandonText-Regular", Helvetica, Arial, sans-serif;
+  background-color: #24292D;
+  @apply text-blue-400;
+}
+.container{
+  max-width: 1580px;
+  width:100%;
+  @apply px-8;
+  margin:0 auto;
+  &.extra-small{
+    max-width: 410px;
+  }
+  &.small{
+    max-width: 590px;
+  }
+
+}
+.page{
+  background-color: #fff;
+}
+.mobile-only{
+  @apply hidden;
+  @screen lg{
+    @apply block;
+  }
+}
+.desktop-only{
+  @apply block;
+  @screen lg{
+    @apply hidden;
+  }
+}
+.mobile-only-ib{
+  @apply hidden;
+  @screen lg{
+    display: inline-block!important;
+  }
+}
+.desktop-only-ib{
+  @apply inline-block;
+  @screen lg{
+    display: none!important;
+  }
+}
+.layout{
+  // @apply py-16;
+}
+a{
+  transition: color 100ms;
+  &:hover{
+    @apply text-blue-100;
+  }
+}
+.level-header{
+  @apply text-blue-300;
+  font-family: "BrandonGrotesqueRegular";
+  h2{
+    @apply text-4xl;
+    @screen sm{
+      @apply text-3xl;
+    }
+  }
+  &.in-section{
+    @apply mb-6;
+  }
+}
